@@ -1,0 +1,8 @@
+reporting:
+  enabled: true
+  server:
+    hostname: https://solvdinternal.zebrunner.com
+    access-token: PIy0V9xog8XTcjAndftJcndu3unjFkLq5K0AKZ4cJggyb7a4TF
+  project-key: ICUAQA
+  run:
+    display-name: "Mobile Tests Run"
