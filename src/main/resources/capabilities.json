@@ -1,0 +1,6 @@
+{
+  "selenoid:options": {
+    "enableVNC": true,
+    "enableVideo": true
+  }
+}
