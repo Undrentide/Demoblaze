@@ -73,6 +73,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
+                    <jvm>/usr/lib/jvm/java-21-openjdk/bin/java</jvm>
                     <argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>
                     <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
