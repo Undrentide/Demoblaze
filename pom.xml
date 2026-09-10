@@ -40,7 +40,7 @@
                         <arg>-parameters</arg>
                     </compilerArgs>
                     <fork>true</fork>
-                    <executable>/opt/jdk-21/bin/javac</executable>
+                    <executable>usr/bin/javac</executable>
                 </configuration>
             </plugin>
             <plugin>
