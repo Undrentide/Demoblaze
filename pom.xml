@@ -39,8 +39,6 @@
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
-                    <fork>true</fork>
-                    <executable>/opt/jdk-21/bin/javac</executable>
                 </configuration>
             </plugin>
             <plugin>
@@ -73,7 +71,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <jvm>/opt/jdk-21/bin/java</jvm>
                     <argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>
                     <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
