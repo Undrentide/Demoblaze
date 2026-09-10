@@ -40,7 +40,7 @@
                         <arg>-parameters</arg>
                     </compilerArgs>
                     <fork>true</fork>
-                    <executable>usr/bin/javac</executable>
+                    <executable>/usr/bin/javac</executable>
                 </configuration>
             </plugin>
             <plugin>
