@@ -6,13 +6,14 @@
     <parameter name="jenkinsEnvironments" value="QA" />
     <test name="Desktop Chrome Test Execution">
         <parameter name="browser" value="chrome"/>
+        <parameter name="selenium_url" value="http://host.docker.internal:4444/wd/hub"/>
         <packages>
             <package name="ua.solvd.demoblaze.common"/>
         </packages>
     </test>
     <test name="Desktop Firefox Test Execution">
         <parameter name="browser" value="firefox"/>
-        <parameter name="selenium_url" value="http://localhost:4445/wd/hub"/>
+        <parameter name="selenium_url" value="http://host.docker.internal:4445/wd/hub"/>
         <packages>
             <package name="ua.solvd.demoblaze.common"/>
         </packages>
