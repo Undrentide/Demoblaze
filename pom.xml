@@ -39,6 +39,7 @@
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
+                    <executable>/opt/jdk-21/bin/javac</executable>
                 </configuration>
             </plugin>
             <plugin>
