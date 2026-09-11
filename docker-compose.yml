@@ -1,0 +1,34 @@
+version: '3.8'
+networks:
+  infra:
+    external: true
+services:
+  selenium-hub:
+    image: seleniarm/hub:latest
+    container_name: selenium-hub
+    networks:
+      - infra
+    ports:
+      - "4444:4444"
+  chrome-node:
+    image: seleniarm/node-chromium:latest
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - infra
+    shm_size: 2gb
+  firefox-node:
+    image: seleniarm/node-firefox:latest
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - infra
+    shm_size: 2gb

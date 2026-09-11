@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Web Regression Cron" verbose="1">
+    <parameter name="jenkinsJobName" value="Web-Regression-Cron" />
+    <parameter name="jenkinsJobType" value="cron" />
+    <parameter name="scheduling" value="H 2 * * *" />
+    <test name="Web Suite Matrix">
+        <parameter name="jobName" value="Web-Automation-Suite" />
+        <parameter name="browser" value="chrome,firefox" />
+    </test>
+</suite>
